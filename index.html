@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Balloons JS Example</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: #f0f8ff;
+    }
+    button {
+      margin: 10px;
+      padding: 12px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Balloons Demo 🎈</h1>
+  <button onclick="releaseBalloons()">🎈 Release Balloons</button>
+  <button onclick="releaseTextBalloons()">💬 Release Text Balloons</button>
+
+  <script type="module">
+    import { balloons, textBalloons } from 'https://cdn.jsdelivr.net/npm/balloons-js@1.0.5/+esm';
+
+    window.releaseBalloons = function () {
+      balloons();
+    };
+
+    window.releaseTextBalloons = function () {
+      textBalloons([
+        {
+          text: "🎉 Hello!",
+          fontSize: 100,
+          color: "#ff69b4",
+        },
+        {
+          text: "💻 JS FTW!",
+          fontSize: 90,
+          color: "#008080",
+        },
+        {
+          text: "🚀",
+          fontSize: 120,
+          color: "#000",
+        },
+      ]);
+    };
+  </script>
+</body>
+</html>
