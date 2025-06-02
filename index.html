@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,32 +33,31 @@
   <button onclick="releaseBalloons()">🎈 Release Balloons</button>
   <button onclick="releaseTextBalloons()">💬 Release Text Balloons</button>
 
-  <script type="module">
-    import { balloons, textBalloons } from 'https://cdn.jsdelivr.net/npm/balloons-js@1.0.5/+esm';
+  <script type="text/javascript" src="balloons.min.js"></script>
+  <script type="text/javascript">
+  window.releaseBalloons = function () {
+    balloons();
+  };
 
-    window.releaseBalloons = function () {
-      balloons();
-    };
-
-    window.releaseTextBalloons = function () {
-      textBalloons([
-        {
-          text: "🎉 Hello!",
-          fontSize: 100,
-          color: "#ff69b4",
-        },
-        {
-          text: "💻 JS FTW!",
-          fontSize: 90,
-          color: "#008080",
-        },
-        {
-          text: "🚀",
-          fontSize: 120,
-          color: "#000",
-        },
-      ]);
-    };
+  window.releaseTextBalloons = function () {
+    textBalloons([
+      {
+        text: "🎉 Hello!",
+        fontSize: 100,
+        color: "#ff69b4",
+      },
+      {
+        text: "💻 JS FTW!",
+        fontSize: 90,
+        color: "#008080",
+      },
+      {
+        text: "🚀",
+        fontSize: 120,
+        color: "#000",
+      },
+    ]);
+  };
   </script>
 </body>
 </html>
