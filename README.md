@@ -1,6 +1,6 @@
 # 🎈 Balloons Demo JS
 
-A simple HTML demo showcasing the [balloons-js](https://arturbien.github.io/balloons-js/) animation library, using pure JavaScript and ES Modules via CDN.
+A simple HTML demo showcasing the [balloons-js](https://arturbien.github.io/balloons-js/) animation library, using pure JavaScript with two buttons.
 
 [![Balloons Demo JS](demo.jpg)](https://basemax.github.io/balloons-demo-js/)
 
